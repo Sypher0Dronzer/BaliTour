@@ -67,7 +67,7 @@ const highlights = [
 
 export default function ProgramHighlights() {
   return (
-    <section className="maxWidthForSections py-16">
+    <section id="highlights" className="maxWidthForSections py-16">
        <h1 className="sm:text-5xl leading-tight text-3xl text-center gradient-text font-semibold">
         Program Highlights
       </h1>

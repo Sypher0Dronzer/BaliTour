@@ -63,7 +63,7 @@ const Faq = () => {
   };
 
   return (
-    <div className=" py-12">
+    <div id="faq" className=" py-12">
       <div className="maxWidthForSections">
 
         <h1 className="sm:text-5xl text-3xl text-center gradient-text leading-tight font-semibold py-2 ">

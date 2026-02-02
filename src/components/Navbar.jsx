@@ -8,9 +8,7 @@ const Navbar = () => {
     setIsOpenNav(!isNavOpen);
   }
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
-    { name: "Clients", href: "#clients" },
+    { name: "program highlights", href: "#highlights" },
     { name: "FAQ", href: "#faq" },
   ];
   return (
