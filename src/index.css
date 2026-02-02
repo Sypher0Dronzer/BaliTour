@@ -1,0 +1,105 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 58px;
+}
+
+/* ---------------for navbar-------------- */
+.nav-itemMobile {
+  transition: opacity 2s, transform 1.5s;
+  transition-delay: calc(0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateX(50px); /* Initial transform state */
+}
+
+.nav-itemMobile.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-itemMobile.is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateX(50px);
+}
+.close-itemMobile {
+  transition: opacity 2s, transform 1.5s;
+  transition-delay: calc(0.1s * var(--i-nav));
+  opacity: 0;
+  transform: translateY(-50px); /* Initial transform state */
+}
+
+.close-itemMobile.icon-is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.close-itemMobile.icon-is-hidden {
+  transition: none; /* Disable transition for instant reset */
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+@layer utilities {
+  .maxWidthForSections {
+    @apply lg:max-w-[900px] mx-auto xl:px-0 px-[3vw] sm:px-[5vw];
+  }
+  .btn {
+    @apply bg-white px-3.5 py-2 rounded-tl-3xl rounded-br-3xl font-semibold;
+  }
+  .btn-primary {
+    @apply text-white cursor-pointer
+         bg-gradient-to-r from-violet-600 via-violet-700 to-purple-700
+         shadow-md shadow-violet-400/50
+         transition-all duration-300 ease-out;
+  }
+  .btn-primary:hover {
+    @apply bg-gradient-to-r from-violet-500 via-violet-600 to-purple-600
+         shadow-xl shadow-violet-500/60
+         -translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply text-violet-700
+         bg-violet-100/60
+         ring-1 ring-violet-300
+         shadow-sm shadow-violet-200/40
+         transition-all duration-300 ease-out;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-violet-200
+         text-violet-800
+         ring-violet-400
+         shadow-md shadow-violet-300/50
+         -translate-y-0.5;
+  }
+
+  .gradient-text{
+    @apply bg-gradient-to-r from-violet-700 via-purple-700 to-fuchsia-700 bg-clip-text text-transparent
+  }
+
+  .hero-header{
+    @apply  font-bold uppercase text-white/70 
+  }
+}
+
+
+.char-border{
+  -webkit-text-stroke-width: 2px; /* Border thickness */
+  -webkit-text-stroke-color: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (for horizontal scrollbars) */
+}
+
+::-webkit-scrollbar-track {
+  padding: 0;
+  background: #ddd6fe; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5b21b6; /* Color of the scrollbar thumb */
+  border-radius: 100vw; /* Rounded corners for the thumb */
+   /* Border around the thumb to match the track */
+}
